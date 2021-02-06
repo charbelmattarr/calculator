@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<style type="text/css">
+			input.b
+				{
+					width: 50px;
+					height: 50px;
+				}
+		</style>
+		<script type="text/javascript">
+			function calc(v)
+			{
+				document.getElementById("display").value+=v;
+			}
+			function result()
+			{
+				document.getElementById("display").value=eval(document.getElementById("display").value);
+			}
+			function c()
+			{
+				document.getElementById("display").value="";
+			}
+		</script>
+	</head>
+	<body>
+	<form>
+		<table border=1 style="background-color: #00AAFF">
+		<tr>
+			<th colspan=4><input type=text id="display" size=26></th>
+		</tr>
+		<tr>
+			<td><input type=button class=b value=7 onclick=calc(7)></td>
+			<td><input type=button class=b value=8 onclick=calc(8)></td>
+			<td><input type=button class=b value=9 onclick=calc(9)></td>
+			<td><input type=button class=b value="+" onclick=calc("+")></td>
+		</tr>
+		<tr>
+			<td><input type=button class=b value=4 onclick=calc(4)></td>
+			<td><input type=button class=b value=5 onclick=calc(5)></td>
+			<td><input type=button class=b value=6 onclick=calc(6)></td>
+			<td><input type=button class=b value="-" onclick=calc("-")></td>
+		</tr>
+		<tr>
+			<td><input type=button class=b value=1 onclick=calc(1)></td>
+			<td><input type=button class=b value=2 onclick=calc(2)></td>
+			<td><input type=button class=b value=3 onclick=calc(3)></td>
+			<td><input type=button class=b value="*" onclick=calc("*")></td>
+		</tr>
+		<tr>
+			<td><input type=button class=b value=0 onclick=calc(0)></td>
+			<td><input type=button class=b value="C" onclick=c()></td>
+			<td><input type=button class=b value="=" onclick=result()></td>
+			<td><input type=button class=b value="/" onclick=calc("/")></td>
+		</tr>
+		</table>
+	</form>
+	</body>
+</html>
